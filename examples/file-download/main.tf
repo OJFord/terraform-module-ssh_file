@@ -9,6 +9,6 @@ module "remote_etc_hosts" {
 }
 
 resource "local_file" "foobar" {
-  content = module.remote_etc_hosts.content
+  content  = module.remote_etc_hosts.content
   filename = "/tmp/hosts-backups/${module.remote_etc_hosts.content_md5}"
 }
